@@ -1,0 +1,145 @@
+html{ /*Тут у нас прописано для задника */
+    background-color: #a4d6d6;
+    font-size: 15px;
+    color: black;
+    background-image: linear-gradient(#ddfffd, #a4d6d6);
+}
+
+p{ /* Для текста*/
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+a{ /* Для ссылок*/
+    text-decoration: none;
+    color: #000000;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+a:hover{
+    animation: changeColorA 3s infinite;
+} 
+
+.name{ /* Тут типа "Дарья"*/
+    font-size: 50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.user{ /* Что-то вроде контейнера (сама карточка, где весь текст и тд)*/
+    padding: 50px;
+    border-radius: 25px;
+    text-align: center;
+    width: 35%;
+    background-color: #ddfffd;
+    margin: 50px auto;
+    box-shadow: 10px 5px 20px rgba(0, 63, 104, 0.242);
+}
+
+.about{ /* Это короче типа ссылка на мою страницу (плюс всякие еще мерцания и тд)*/
+    font-size: 30px;
+    animation: flicker 2s infinite; 
+    animation-direction: alternate-reverse;
+}
+
+.post{ /* "веб-разработчик" */
+    font-size: 32px;
+    text-shadow: 1px 1px 4px rgba(0, 20, 47, 0.127);
+}
+
+.description{ /* Долго не могу найти этот блок, где тупо текст с инфой (ГБПОУ Симф колледж)*/
+    font-size: 26px;
+    font-style: italic;
+    color: #5a7e7e;
+}
+
+.user-avatar{ /* Ну тут еще ладно, понятно, что иконка*/
+    background-image: url(./klipartz.png);
+    background-size: cover;
+    margin: 0 auto;
+    width: 200px;
+    height: 200px;
+    border: 7px solid white;
+    border-radius: 50%;
+    animation: changeColorborder 3s infinite;
+}
+
+.button{ /* "Нажми!"*/
+    padding: 15px;
+    border-radius: 25px;
+    display: inline-block;
+    margin-top: 25px;
+    color: black;
+    background-color: #b0e6e6;
+    font-size: 32px;
+}
+
+.circle:active{
+
+    animation-play-state: paused;
+}
+
+.circle{ /* Кружок, что ездит туда-сюда */
+    display: flex;
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    left: 0;
+    animation-name: circle;
+    animation-duration: 2s;
+    animation-direction: alternate-reverse;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes changeColorA{ /* анимация для переливания ссылок*/
+    0%{
+        color: #276bca
+    }
+    50%{
+        color: #0bdc69
+    }
+    100%{
+        color: #276bca
+    }
+}
+
+@keyframes changeColorborder{ /* анимация для изменения цвета обводки*/
+    0%{
+        border-color: #3e41f2;
+    }
+    30%{
+        border-color: #37d6e5
+    }
+    50%{
+        border-color: #00ffa2
+    }
+    70%{
+        border-color: #37d6e5
+    }
+    100%{
+        border-color: #3e41f2;
+    }
+}
+
+@keyframes circle { /* перекатывания шарика*/
+    0%{
+        left: 0;
+        background-color: #5a7e7e;
+    }
+    100%{
+        left: 80%;    
+        border-radius: 0%;
+        background-color: #37d6e5;
+    }
+}
+
+@keyframes flicker { /* исчезновение-появление "связь со мной"*/
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
